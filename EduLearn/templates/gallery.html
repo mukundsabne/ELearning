@@ -18,7 +18,7 @@
 			<div class="page-breadcrum">
 				<div class="container">
 					<ul>
-						<li><a href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'index' %}">Home  </a></li>
 						<li>-</li>
 						<li>Gallery</li>
 					</ul>
@@ -78,4 +78,18 @@
 	        </div> <!-- /.event-section -->
 				</div>
 
+{% endblock %}
+
+
+{% block jquerycode %}
+<script type="text/javascript">
+$(document).ready(function(){
+$('img').click(function(){
+
+	var img = $(this).attr('src');
+	alert(img);
+});
+
+});
+</script>
 {% endblock %}
