@@ -735,3 +735,13 @@
 
 	        <!-- Footer ______________________________ -->
 	      {% endblock %}
+
+				{% block jquerycode %}
+				<script type="text/javascript">
+				$(document).ready(function(){
+
+				$('#{{initial}}').addClass("current-page-item");
+
+				});
+				</script>
+				{% endblock %}

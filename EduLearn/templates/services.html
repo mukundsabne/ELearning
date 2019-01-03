@@ -15,7 +15,7 @@
              <div class="post-wrapper row">
                <div class="single-post wow fadeInUp col-lg-4 col-md-4 col-sm-6 col-xs-6">
                    <div class="img-holder">
-                  
+
                      <img src="{% static 'images/blog/1.jpg' %}" alt="Image">
                      <a href="#" class="tran4s"></a>
                    </div>
@@ -60,4 +60,15 @@
 
 
 
+{% endblock %}
+
+
+{% block jquerycode %}
+<script type="text/javascript">
+$(document).ready(function(){
+
+$('#{{initial}}').addClass("current-page-item");
+
+});
+</script>
 {% endblock %}

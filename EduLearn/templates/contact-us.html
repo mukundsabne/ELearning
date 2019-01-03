@@ -25,3 +25,13 @@
  विद्याथी जीवनात अभ्यास करत असताना येणाऱ्या अडथळ्यांना सामोर जावुन  आपण आपल्या मुख्य ध्येयापासून कितपत दूर गेलो आहोत हे जाणून घेणे खूप महत्वाचे असते . </p>
 
 {% endblock %}
+
+{% block jquerycode %}
+<script type="text/javascript">
+$(document).ready(function(){
+
+$('#{{initial}}').addClass("current-page-item");
+
+});
+</script>
+{% endblock %}
