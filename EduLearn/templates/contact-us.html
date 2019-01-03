@@ -1,0 +1,25 @@
+{% extends 'maintheme.html' %}
+{% load static %}
+{% block bodydata %}
+<div class="inner-page-banner">
+  <div class="opacity">
+    <div class="container">
+      <h2>Contact</h2>
+    </div> <!-- /.container -->
+  </div> <!-- /.opacity -->
+</div> <!-- /.inner-page-banner -->
+
+
+<!-- Page Breadcrum __________________________ -->
+<div class="page-breadcrum">
+  <div class="container">
+    <ul>
+      <li><a href="{% url 'index' %}">Home</a></li>
+      <li>-</li>
+      <li>Contact</li>
+    </ul>
+  </div> <!-- /.container -->
+</div> <!-- /.page-breadcrum -->
+
+
+{% endblock %}
