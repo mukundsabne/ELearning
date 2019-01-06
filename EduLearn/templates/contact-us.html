@@ -1,5 +1,30 @@
 {% extends 'maintheme.html' %}
 {% load static %}
+
+{% block csscode %}
+<style media="screen">
+  .contactul li span
+  {
+    margin-right:8px;
+    width:42px;
+    height:42px;
+    background:#edeaea;
+    line-height:42px;
+    text-align:center;
+    display:inline-block;
+    vertical-align:middle;
+    border-radius:50%;
+    box-sizing:border-box;
+  }
+  .contactul li
+  {
+  padding:10px;
+  }
+
+</style>
+
+{% endblock %}
+
 {% block bodydata %}
 <div class="inner-page-banner">
   <div class="opacity">
@@ -10,16 +35,52 @@
 </div> <!-- /.inner-page-banner -->
 
 
-<!-- Page Breadcrum __________________________ -->
-<div class="page-breadcrum">
-  <div class="container">
-    <ul>
-      <li><a href="{% url 'index' %}">Home</a></li>
-      <li>-</li>
-      <li>Contact</li>
-    </ul>
-  </div> <!-- /.container -->
-</div> <!-- /.page-breadcrum -->
+<br>
+<div class="container">
+  <div class="col-md-6 col-sm-6">
+<h3>Contact Us</h3>
+<form class="" action="#" method="post">
+
+<div class="form-group">
+  <label for="Name">Full Name</label>
+  <input type="text" name="fullname" class="form-control" value="">
+</div>
+
+<div class="form-group">
+  <label for="Name">Email</label>
+  <input type="email" name="email" class="form-control" value="">
+</div>
+
+<div class="form-group">
+  <label for="Name">Mobile No</label>
+  <input type="number" name="mob" class="form-control" value="">
+</div>
+
+<div class="form-group">
+  <label for="Name">Message</label>
+  <textarea name="name" class="form-control"></textarea>
+</div>
+
+<div class="">
+  <input type="submit" name="" value="Send Message" class="btn btn-lg btn-danger" >
+</div>
+</form>
+
+  </div>
+
+  <div class="col-md-6 col-sm-6">
+    <div >
+      <ul class="contactul">
+        <li><span ><i class="ficon flaticon-signs"></i></span> <a href="#" class="tran3s">45/12 Best Avenue Street, UK 2450, US</a></li>
+        <li><span ><i class="ficon flaticon-multimedia"></i></span> <a href="#" class="tran3s">info@edutech.com</a></li>
+        <li><span ><i class="ficon flaticon-technology"></i></span> <a href="#" class="tran3s">+8801712570051</a></li>
+        <li><span ><i class="ficon flaticon-technology"></i></span> <a href="#" class="tran3s">+8801712570051</a></li>
+        <li><span ><i class="ficon flaticon-technology"></i></span> <a href="#" class="tran3s">+8801712570051</a></li>
+      </ul>
+    </div> <!-- /.left-side -->
+  </div>
+</div>
+
 
 <p> प्रिय मित्रांनो ,
  विद्याथी जीवनात अभ्यास करत असताना येणाऱ्या अडथळ्यांना सामोर जावुन  आपण आपल्या मुख्य ध्येयापासून कितपत दूर गेलो आहोत हे जाणून घेणे खूप महत्वाचे असते . </p>

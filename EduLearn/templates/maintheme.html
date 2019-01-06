@@ -12,6 +12,7 @@
 
 		<title>E-Edu-Learning</title>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/fav-icon/icon.png' %} ">
 
@@ -22,7 +23,9 @@
 		<!-- responsive style sheet -->
 		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
 
+{% block csscode %}
 
+{% endblock %}
 	</head>
 
 	<body>
@@ -40,13 +43,7 @@
 								<li><span class="icon round-border"><i class="ficon flaticon-signs"></i></span> <a href="#" class="tran3s">45/12 Best Avenue Street, UK 2450, US</a></li>
 								<li><span class="icon round-border"><i class="ficon flaticon-multimedia"></i></span> <a href="#" class="tran3s">info@edutech.com</a></li>
 								<li><span class="icon round-border"><i class="ficon flaticon-technology"></i></span> <a href="#" class="tran3s">+8801712570051</a></li>
-								<li><span class="icon round-border"><i class="ficon flaticon-translation"></i></span>
-									<select class="selectpicker">
-										<option>English</option>
-										<option>Spanish</option>
-										<option>L'italiano</option>
-									</select>
-								</li>
+								
 							</ul>
 						</div> <!-- /.left-side -->
 						<div class="right-side float-right">
@@ -89,7 +86,7 @@
 							       <li id="h"><a href="{% url 'index' %}">Home</a></li>
                      <li id="s"><a href="{% url 'services' %}">Services</a></li>
 							       <li id="g"><a href="{% url 'gallery' %}">Gallery</a></li>
-							       <li id="r"><a href="#">Registration</a></li>
+							       <li id="r"><a href="{% url 'reg' %}">Registration</a></li>
                      <li id="a"><a href="{% url 'about' %}">About</a></li>
 							       <li id="c"><a href="{% url 'contact' %}">Contact</a></li>
                       <li id="f"><a href="{% url 'faq' %}">FAQ</a></li>

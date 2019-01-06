@@ -17,3 +17,6 @@ def contact(request):
 
 def faq(request):
     return render(request,'faq.html',{'initial':'f'})
+
+def reg(request):
+    return render(request,'registration.html',{'initial':'r'})
