@@ -19,26 +19,26 @@
 			    <div class="carousel-inner" role="listbox">
 			      <div class="item active">
 			        <img src="{% static 'images/home/slide-1.jpg' %}" alt="New York" width="1200" height="700">
-			        <div class="carousel-caption">
+			        <!-- <div class="carousel-caption">
 			          <h3>New York</h3>
 			          <p>The atmosphere in New York is lorem ipsum.</p>
-			        </div>
+			        </div> -->
 			      </div>
 
 			      <div class="item">
 			        <img src="{% static 'images/home/slide-2.jpg' %}" alt="Chicago" width="1200" height="700">
-			        <div class="carousel-caption">
+			        <!-- <div class="carousel-caption">
 			          <h3>Chicago</h3>
 			          <p>Thank you, Chicago - A night we won't forget.</p>
-			        </div>
+			        </div> -->
 			      </div>
 
 			      <div class="item">
 			        <img src="{% static 'images/home/slide-5.jpg' %}" alt="Los Angeles" width="1200" height="700">
-			        <div class="carousel-caption">
+			        <!-- <div class="carousel-caption">
 			          <h3>LA</h3>
 			          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
-			        </div>
+			        </div> -->
 			      </div>
 			    </div>
 
@@ -53,6 +53,8 @@
 			    </a>
 			</div>
 
+
+
 </div>
 </div>
 			 <!--  /#banner -->
@@ -65,7 +67,7 @@
 	        			<h3><i class="fa fa-graduation-cap" aria-hidden="true"></i> E-Learning Programme</h3>
 
 	        			<p> </p>
-	        			<a href="course-details.html" class="tran3s">Rede more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+	        			<a href="{% url 'services' %}" class="tran3s">Rede more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 	        		</div>
 	        		<div class="item-part float-left item2 p-color-bg">
 	        			<img src=" {% static 'images/new/4.jpg' %}" alt="Image" >
@@ -73,11 +75,11 @@
 	        		<div class="item-part float-left item1 p-color-bg">
 	        			<h3><i class="fa fa-tags" aria-hidden="true"></i> Test Series Programme</h3>
 	        			<p> </p>
-	        			<a href="course-details.html" class="tran3s">Rede more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+	        			<a href="{% url 'services' %}" class="tran3s">Rede more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
 	        		</div>
 	        	</div> <!-- /.container -->
 	        </div> <!-- /.theme-manage-area -->
-
+<br>
 
 	        <!-- Course Finder  ______________________________ -->
 	         <!-- /.course-search-option -->
@@ -89,25 +91,19 @@
 								<br>
 	        			<h2 class="p-color">Welcome to E-Educational Hub Center</h2>
 	        			<h5>First Time In Latur</h5>
-	        			<p> </p>
+	        			<p style="color:#000;display:block;box-shadow:12px 12px #ebebe0;padding:16px;border:1px solid #ebebe0;"> प्रिय मित्रांनो , <br>
+								 विध्यार्थी जीवनात अभ्यास करत असताना येणाऱ्या अडथळ्यांना सामोर जावुन  आपण आपल्या मुख्य ध्येयापासून कितपत दूर गेलो आहोत हे जाणून घेणे खूप महत्वाचे असते . <br>
+								 परंतु असे न करता आपण मूळ उद्देश सोडून दुसऱ्या गोष्टीच्या मागे लागतो व वेगवेगळ्या पद्धतीने अभ्यास करण्याचा मार्ग शोधत असतो परंतु प्रत्येक वेळी आपण यशस्वी होऊच असे नाही बहुतांश वेळा आपल्या पदरी निराशा येते.  म्हणूनच विद्यार्थ्यांच्या उज्वल भविष्यासाठी राज्यातील प्रथमच असं 'Educational Hub Center'
+								 ची लातूरमध्ये स्थापना करत आहोत .
+								 <a href="{% url 'about' %}">Read More....</a>
+							  </p>
 	        		</div> <!-- /.section-title -->
 
-	        		<div class="row">
-	        			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp">
-	        				<h3><i class="fa fa-graduation-cap" aria-hidden="true"></i> LEARN COUSES first</h3>
-	        				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia con- sequuntur magni dolores eos qui ratione </p>
-	        			</div>
-	        			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp">
-	        				<h3><i class="fa fa-tags" aria-hidden="true"></i> 440 Courses available</h3>
-	        				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia con- sequuntur magni dolores eos qui ratione </p>
-	        			</div>
-	        			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeInUp">
-	        				<h3><i class="fa fa-diamond" aria-hidden="true"></i> Everything you need</h3>
-	        				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia con- sequuntur magni dolores eos qui ratione </p>
-	        			</div>
-	        		</div>
+
 	        	</div> <!-- /.container -->
 	        </div> <!-- /.welcome-section -->
+
+
 
 	        <!-- Popular Course _________________________ -->
 	        <div class="popular-course wow fadeInUp theme-bg-color">
@@ -116,213 +112,130 @@
 
 	        		<div class="row">
 		        		<div class="theme-slider course-item-wrapper">
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/2.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">web development courses</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
+		        			 <!-- /.item -->
 
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
+		        			 <!-- /.item -->
+									 <!-- /.item -->
+
+		        			 <!-- /.item -->
+
+		        			 <!-- /.item -->
+
+		        			<div class="item hvr-float-shadow" style="padding:6px;">
+
+		        				<div class="text">
+		        					<h4><a href="course-details.html">E-Learning</a></h4>
+		        					<div class="img round-border"><img src="{% static 'images/new/icon1.png' %}" alt="Image"></div>
+		        					<h6 style="font-weight:bold;">Fee Details </h6>
+
+										<table class="table table-bordered" style="font-weight:bold;color:red;">
+											<thead>
+												<tr>
+													<th></th>
+													<th>1 Month</th>
+													<th>2 Month</th>
+													<th>3 Month</th>
+												</tr>
+
+											</thead>
+											<tbody>
+												<tr>
+													<td>1 Hour</td><td>600 RS</td><td>1100 RS</td><td>1600 RS</td>
+												</tr>
+												<tr>
+													<td>2 Hour</td><td>1100 RS</td><td>2100 RS</td><td>3000 RS</td>
+												</tr>
+												<tr>
+													<td>3 Hour</td><td>1600 RS</td><td>3100 RS</td><td>4600 RS</td>
+												</tr>
+											</tbody>
+										</table>
+
+		        					<div class="clear-fix">
+
+
+		        						<a href="{% url 'services' %}" class="tran3s p-color-bg themehover">Read More</a>
 		        					</div>
 		        				</div> <!-- /.text -->
 		        			</div> <!-- /.item -->
 
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/3.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">Learn Basic German Fast</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p></p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
+									<div class="item hvr-float-shadow" style="padding:6px;">
 
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
+										<div class="text">
+											<h4><a href="course-details.html">Test-Series</a></h4>
+											<div class="img round-border"><img src="{% static 'images/new/icon2.png' %}" alt="Image"></div>
+											<h6 style="font-weight:bold;">Fee Details </h6>
+
+										<table class="table table-bordered" style="font-weight:bold;color:red;">
+											<thead>
+												<tr>
+													<th></th>
+													<th>1 Month</th>
+													<th>2 Month</th>
+													<th>3 Month</th>
+												</tr>
+
+											</thead>
+											<tbody>
+												<tr>
+													<td>1 Hour</td><td>700 RS</td><td>1300 RS</td><td>1900 RS</td>
+												</tr>
+												<tr>
+													<td>2 Hour</td><td>1300 RS</td><td>2500 RS</td><td>3700 RS</td>
+												</tr>
+												<tr>
+													<td>3 Hour</td><td>1900 RS</td><td>3700 RS</td><td>5500 RS</td>
+												</tr>
+											</tbody>
+										</table>
+
+											<div class="clear-fix">
+
+
+												<a href="{% url 'services' %}" class="tran3s p-color-bg themehover">Read More</a>
+											</div>
+										</div> <!-- /.text -->
+									</div>
+
+									<div class="item hvr-float-shadow" style="padding:6px;">
+
+		        				<div class="text">
+		        					<h4><a href="course-details.html">Combo(E-learning + Test-Series)</a></h4>
+		        					<div class="img round-border"><img src="{% static 'images/new/icon3.png' %}" alt="Image"></div>
+		        					<h6 style="font-weight:bold;">Fee Details </h6>
+
+										<table class="table table-bordered" style="font-weight:bold;color:red;">
+											<thead>
+												<tr>
+													<th></th>
+													<th>1 Month</th>
+													<th>2 Month</th>
+													<th>3 Month</th>
+												</tr>
+
+											</thead>
+											<tbody>
+												<tr>
+													<td>1 Hour</td><td>800 RS</td><td>1500 RS</td><td>2200 RS</td>
+												</tr>
+												<tr>
+													<td>2 Hour</td><td>1500 RS</td><td>2900 RS</td><td>4300 RS</td>
+												</tr>
+												<tr>
+													<td>3 Hour</td><td>2200 RS</td><td>4300 RS</td><td>6400 RS</td>
+												</tr>
+											</tbody>
+										</table>
+
+		        					<div class="clear-fix">
+
+
+		        						<a href="{% url 'services' %}" class="tran3s p-color-bg themehover">Read More</a>
 		        					</div>
 		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/4.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">basic time use properly</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/3.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">Learn Basic German Fast</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/2.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">web development courses</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/4.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">basic time use properly</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/3.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">Learn Basic German Fast</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/2.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">web development courses</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
+		        			</div>
+		     <!-- /.item -->
+ <!-- /.item -->
 		        		</div> <!-- /.course-slider -->
 		        	</div>
 	        	</div> <!-- /.container -->
@@ -333,31 +246,31 @@
 	        <div class="course-progress">
 	        	<div class="opacity">
 	        		<div class="container">
-	        			<h2>GET 100 COURSES FOR <span class="p-color">FREE</span></h2>
+	        			<h2>GET Enrolled <span class="p-color">NOW</span></h2>
 	        			<p>Tech you how to build a complete learning management system upcoming education for student</p>
 	        			<h6>WE'RE GOOD AT some member</h6>
 
 	        			<div class="row">
-	        				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+	        				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
 	        					<div class="icon"> <i class="ficon flaticon-crowdfunding"></i> </div>
-	        					<p>CERTIFIED TEACHERS</p>
+	        					<p>TOTAL VIEWS</p>
 	        					<div class="number"><span class="timer" data-from="0" data-to="117" data-speed="1500" data-refresh-interval="5">0</span></div>
 	        				</div>
-	        				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+	        				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
 	        					<div class="icon"><i class="ficon flaticon-teamwork"></i></div>
 	        					<p>COURSES COMPLETE</p>
 	        					<div class="number"><span class="timer" data-from="0" data-to="12456" data-speed="1500" data-refresh-interval="5">0</span></div>
 	        				</div>
-	        				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+	        				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
 	        					<div class="icon"><i class="ficon flaticon-medical"></i></div>
 	        					<p>Students Enrolled</p>
 	        					<div class="number"><span class="timer" data-from="0" data-to="220234" data-speed="1500" data-refresh-interval="5">0</span></div>
 	        				</div>
-	        				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+	        				<!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 	        					<div class="icon"><i class="ficon flaticon-book"></i></div>
 	        					<p>Students Enrolled</p>
 	        					<div class="number"><span class="timer" data-from="0" data-to="100" data-speed="1500" data-refresh-interval="5">0</span>%</div>
-	        				</div>
+	        				</div> -->
 	        			</div> <!-- /.row -->
 	        		</div> <!-- /.container -->
 	        	</div> <!-- /.opacity -->

@@ -2,27 +2,60 @@
 
 {% load static %}
 
+
+{% block csscode %}
+<style media="screen">
+  #fees div div{
+    background:#fff;
+padding:20px;
+box-shadow:10px 10px  #ffd9cc;
+border:1px solid  #ffd9cc;
+text-align:Center;
+
+  }
+    #fees div div table{
+      color:#333;
+      font-weight:bold;
+    }
+
+  #note
+  {
+    color:#fff;
+    border:1px solid #000;
+    padding:15px;
+    border-radius:10px;
+    background:#cd2122;
+    font-size:18px;
+
+  }
+</style>
+{% endblock %}
+
 {% block bodydata %}
 
 <!-- Latest News ___________________________ -->
          <div class="latest-news wow fadeInUp theme-bg-color">
            <div class="container">
-             <div class="theme-title">
-               <h2>latest news</h2>
-               <p>Something for education news,latest news feed</p>
-             </div>
 
              <div class="post-wrapper row">
                <div class="single-post wow fadeInUp col-lg-4 col-md-4 col-sm-6 col-xs-6">
                    <div class="img-holder">
 
-                     <img src="{% static 'images/blog/1.jpg' %}" alt="Image">
+                     <img src="{% static 'images/new/1.jpg' %}" alt="Image">
                      <a href="#" class="tran4s"></a>
                    </div>
                    <div class="text-wrapper">
                      <div class="text tran4s">
-                       <a href="#">New Chicago school budget </a>
-                       <p>Education is the process of facilitating learning. Knowledge kills, values, beliefs, and habits of a group of people are trans- ferred  </p>
+                       <a href="#">E-Learning Programme</a>
+                       <p>Who Can Apply ?</p>
+                       <br>
+                       <p style="font-weight:bold;">
+                         5 <sup>th</sup> - 10 <sup>th</sup> Std.(MH-Only) <br>
+                         (Science) 11 <sup>th</sup> - 12 <sup>th</sup> Std. (MH-CBSE) <br>
+                         MPSC | UPSC | STI | PSI | ASP | <br>
+                         MPSC-CLERK | TAX ASSISTMENT | GOVT. PHARMACIST | <br>
+                         सरळ सेवा भरती | पोलीस भरती | रेल्वे भरती | लष्कर भरती
+                         </p>
                      </div> <!-- /.text -->
                    </div> <!-- /.text-wrapper -->
                </div> <!-- /.single-post -->
@@ -30,13 +63,22 @@
                <div class="single-post wow fadeInUp col-lg-4 col-md-4 col-sm-6 col-xs-6">
                    <div class="img-holder">
 
-                     <img src="{% static 'images/blog/2.jpg' %}" alt="Image">
+                     <img src="{% static 'images/new/3.jpg' %}" alt="Image">
                      <a href="blog-details.html" class="tran4s"></a>
                    </div>
                    <div class="text-wrapper">
                      <div class="text tran4s">
-                       <a href="#">New Chicago school budget </a>
-                       <p>Education is the process of facilitating learning. Knowledge kills, values, beliefs, and habits of a group of people are trans- ferred  </p>
+                       <a href="#">Test Series Programme</a>
+                        <p>Who Can Apply ?</p>
+                        <br>
+                       <p style="font-weight:bold;">
+                         (Science) 11 <sup>th</sup> - 12 <sup>th</sup> Std. (MH-CBSE) <sup>*</sup> <br>
+                         AIIMS | NEET | JIPMER - Medical <sup>*</sup> <br>
+                         BANKING | MBA | MCA | GATE | GRE | NET | RRB | <br>
+                         GPAT | NIPER | POLICE CONSTABLE | RAILWAY | TISS | <br>
+                         MPSC | UPSC | STI | PSI | ASO | <br>
+                         GOVT. PHARMACIST |  सरळ सेवा भरती | Many More Exams
+                        </p>
                      </div> <!-- /.text -->
                    </div> <!-- /.text-wrapper -->
                </div> <!-- /.single-post -->
@@ -44,18 +86,125 @@
                <div class="single-post wow fadeInUp col-lg-4 col-md-4 col-sm-6 col-xs-6">
                    <div class="img-holder">
 
-                     <img src="{% static 'images/blog/3.jpg' %}" alt="Image">
+                     <img src="{% static 'images/new/2.png' %}" alt="Image">
                      <a href="blog-details.html" class="tran4s"></a>
                    </div>
                    <div class="text-wrapper">
                      <div class="text tran4s">
-                       <a href="#">New Chicago school budget </a>
-                       <p>Education is the process of facilitating learning. Knowledge kills, values, beliefs, and habits of a group of people are trans- ferred  </p>
+                       <a href="#">E Learning + Test Series Programme </a>
+                       <p>Who Can Apply ?</p>
+                       <br>
+
+                       <p>All Students Who are applicable for E Learning and Test Series Programme</p>
                      </div> <!-- /.text -->
                    </div> <!-- /.text-wrapper -->
                </div> <!-- /.single-post -->
              </div> <!-- /.post-wrapper -->
            </div> <!-- /.container -->
+<br>
+           <div class="container" >
+              <p id="note">Note : <br>
+                * Meaning Terms And Condition Apply <br>
+                If you are from 11 <sup>th</sup> and 12 <sup>th</sup> Standard you have not select 1Hr. Programme. <br>
+                Because your entreance test duration is follws between 3Hr. <br>
+                So you have to select 2Hr or 3Hr programme.
+               </p>
+           </div>
+<br><br>
+
+           <div class="container" id="fees">
+             <h4 style="border-top:1px solid #f00;border-bottom:1px solid #f00;text-align:center;color:#ff4d4d;padding:5px;font-size:24px;">Fee Structure</h4>
+             <br>
+             <div class="col-md-4">
+               <div class="">
+                 <h5>E-Learning Programme</h5>
+                 <br>
+                 <table class="table table-bordered" >
+                   <thead>
+                     <tr>
+                       <th></th>
+                       <th>1 Month</th>
+                       <th>2 Month</th>
+                       <th>3 Month</th>
+                     </tr>
+
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td>1 Hour</td><td>600 RS</td><td>1100 RS</td><td>1600 RS</td>
+                     </tr>
+                     <tr>
+                       <td>2 Hour</td><td>1100 RS</td><td>2100 RS</td><td>3000 RS</td>
+                     </tr>
+                     <tr>
+                       <td>3 Hour</td><td>1600 RS</td><td>3100 RS</td><td>4600 RS</td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </div>
+
+             </div>
+             <div class="col-md-4">
+               <div class="">
+                   <h5>Test Series Programme</h5>
+<br>
+                   <table class="table table-bordered" >
+                     <thead>
+                       <tr>
+                         <th></th>
+                         <th>1 Month</th>
+                         <th>2 Month</th>
+                         <th>3 Month</th>
+                       </tr>
+
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1 Hour</td><td>700 RS</td><td>1300 RS</td><td>1900 RS</td>
+                       </tr>
+                       <tr>
+                         <td>2 Hour</td><td>1300 RS</td><td>2500 RS</td><td>3700 RS</td>
+                       </tr>
+                       <tr>
+                         <td>3 Hour</td><td>1900 RS</td><td>3700 RS</td><td>5500 RS</td>
+                       </tr>
+                     </tbody>
+                   </table>
+               </div>
+
+             </div>
+             <div class="col-md-4">
+               <div class="">
+                   <h5>E Learning + Test Series Programme</h5>
+                   <br>
+                   <table class="table table-bordered" >
+                     <thead>
+                       <tr>
+                         <th></th>
+                         <th>1 Month</th>
+                         <th>2 Month</th>
+                         <th>3 Month</th>
+                       </tr>
+
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>1 Hour</td><td>800 RS</td><td>1500 RS</td><td>2200 RS</td>
+                       </tr>
+                       <tr>
+                         <td>2 Hour</td><td>1500 RS</td><td>2900 RS</td><td>4300 RS</td>
+                       </tr>
+                       <tr>
+                         <td>3 Hour</td><td>2200 RS</td><td>4300 RS</td><td>6400 RS</td>
+                       </tr>
+                     </tbody>
+                   </table>
+               </div>
+
+             </div>
+           </div>
+
+
          </div> <!-- /.latest-news -->
 
 
