@@ -1,6 +1,20 @@
 {% extends 'maintheme.html' %}
 {% load static %}
 
+{% block csscode %}
+<style media="screen">
+  #b
+  {
+    background:#f00;
+    color:#fff;
+  }
+  #b:hover{
+border-radius:15px;
+font-weight:bold;
+  }
+</style>
+
+{% endblock %}
 
 {% block bodydata %}
 <div class="inner-page-banner">
@@ -13,10 +27,11 @@
 
 
 <br>
+<form class="" action="#" method="post">
 <div class="container">
   <div class="col-md-6 col-sm-6">
 <h3>Registration Form</h3>
-<form class="" action="#" method="post">
+<br>
 
 <div class="form-group">
   <label for="Name">Full Name</label>
@@ -24,30 +39,89 @@
 </div>
 
 <div class="form-group">
-  <label for="Name">Email</label>
-  <input type="email" name="email" class="form-control" value="">
+  <label for="Name">Applied For</label>
+<select class="form-control" name="appliedfor" >
+  <option value="">---Select---</option>
+</select>
+</div>
+<div class="form-group">
+  <label for="Name">Date Of Birth</label>
+  <input type="date" name="dob" class="form-control" value="">
 </div>
 
 <div class="form-group">
-  <label for="Name">Mobile No</label>
+  <label for="Name">Gender</label> &nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="gender" value="male" checked> Male &nbsp;<input type="radio" name="gender" value="female"> Female
+</div>
+
+<div class="form-group">
+  <label for="Name">Contact 1</label>
   <input type="number" name="mob" class="form-control" value="">
 </div>
 
 <div class="form-group">
-  <label for="Name">Message</label>
-  <textarea name="name" class="form-control"></textarea>
+  <label for="Name">Contact 2</label>
+  <input type="number" name="mob1" class="form-control" value="">
 </div>
 
-<div class="">
-  <input type="submit" name="" value="Send Message" class="btn btn-lg btn-danger" >
-</div>
-</form>
+
+
 
   </div>
 
+<div class="col-md-6 col-lg-6 col-sm-6">
+  <br><br>
+  <div class="form-group">
+    <label for="Name">District</label>
+    <select class="form-control" name="District" >
+      <option value="">---Select---</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="Name">Address</label>
+    <textarea name="name" class="form-control"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="Name">Applied For Course Programme</label>
+    <select class="form-control" name="District" >
+      <option value="">---Select---</option>
+      <option value="e-learning">E-Learning</option>
+      <option value="">Test Series</option>
+      <option value="Combo">Combo (E-learning + Test Series)</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="Name">Duration Of Programme</label>
+    <select class="form-control" name="District" >
+      <option value="">---Select---</option>
+      <option value="">1HR</option>
+      <option value="">2HR</option>
+      <option value="">3HR</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="Name">Duration Of Month</label>
+    <select class="form-control" name="District" >
+      <option value="">---Select---</option>
+      <option value="">1 Month</option>
+      <option value="">2 Month</option>
+      <option value="">3 Month</option>
+    </select>
+  </div>
+<br>
+  <div class="">
+    <input type="submit" name="" value="Register" id="b" class="btn btn-lg btn-danger" >
+  </div>
+</div>
 
 </div>
 
+</form>
+<br><br>
 {% endblock %}
 
 {% block jquerycode %}
