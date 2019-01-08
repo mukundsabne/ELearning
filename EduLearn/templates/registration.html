@@ -40,8 +40,34 @@ font-weight:bold;
 
 <div class="form-group">
   <label for="Name">Applied For</label>
-<select class="form-control" name="appliedfor" >
+<select class="form-control" name="appliedfor" id="appliedfor" onchange="check();">
   <option value="">---Select---</option>
+  <option value="11">11 <sup>th</sup> (Science)</option>
+  <option value="12">12 <sup>th</sup> (Science)</option>
+  <option>MPSC</option>
+  <option>UPSC</option>
+  <option>MBA</option>
+  <option>Diploma</option>
+  <option>Engineering</option>
+  <option>STI</option>
+  <option>PSI</option>
+  <option>ASP</option>
+  <option>MPSC-CLERK</option>
+  <option>BCA</option>
+  <option>MCA</option>
+  <option>TAX ASSISTMENT</option>
+  <option>GOVT. PHARMACIST </option>
+  <option>ASP</option>
+  <option>RRB </option>
+  <option>POLICE CONSTABLE</option>
+  <option>NIPER</option>
+  <option>GPAT </option>
+  <option>GATE</option>
+  <option>ASO</option>
+  <option>NEET</option>
+  <option>AIIMS</option>
+  <option>सरळ सेवा भरती </option>
+
 </select>
 </div>
 <div class="form-group">
@@ -75,7 +101,43 @@ font-weight:bold;
     <label for="Name">District</label>
     <select class="form-control" name="District" >
       <option value="">---Select---</option>
-    </select>
+      <option value="">Akola</option>
+      <option value="">Amravati</option>
+      <option value="">Buldana</option>
+      <option value="">Yavatmal</option>
+      <option value="">Washim</option>
+      <option value="">Aurangabad</option>
+      <option value="">Beed</option>
+      <option value="">Jalna</option>
+      <option value="">Osmanabad</option>
+      <option value="">Nanded</option>
+      <option value="">Latur</option>
+      <option value="">Parbhani</option>
+      <option value="">Hingoli</option>
+      <option value="">Mumbai City</option>
+      <option value="">Mumbai Suburban</option>
+      <option value="">Thane</option>
+      <option value="">Palghar</option>
+      <option value="">Raigad</option>
+      <option value="">Ratnagiri</option>
+      <option value="">Sindhudurg</option>
+      <option value="">Bhandara</option>
+      <option value="">Chandrapur</option>
+      <option value="">Gadchiroli</option>
+      <option value="">Gondia</option>
+      <option value="">Nagpur</option>
+      <option value="">Wardha</option>
+      <option value="">Ahmednagar</option>
+      <option value="">Dhule</option>
+      <option value="">Jalgaon</option>
+      <option value="">Nandurbar</option>
+      <option value="">Nashik</option>
+      <option value="">Kolhapur</option>
+      <option value="">Pune</option>
+      <option value="">Sangli</option>
+      <option value="">Satara</option>
+      <option value="">Solapur</option>
+      </select>
   </div>
 
   <div class="form-group">
@@ -85,7 +147,7 @@ font-weight:bold;
 
   <div class="form-group">
     <label for="Name">Applied For Course Programme</label>
-    <select class="form-control" name="District" >
+    <select class="form-control" name="course" id="course" onchange="check();">
       <option value="">---Select---</option>
       <option value="e-learning">E-Learning</option>
       <option value="">Test Series</option>
@@ -97,7 +159,7 @@ font-weight:bold;
     <label for="Name">Duration Of Programme</label>
     <select class="form-control" name="District" >
       <option value="">---Select---</option>
-      <option value="">1HR</option>
+      <option id="hr1" value="">1HR</option>
       <option value="">2HR</option>
       <option value="">3HR</option>
     </select>
@@ -107,7 +169,7 @@ font-weight:bold;
     <label for="Name">Duration Of Month</label>
     <select class="form-control" name="District" >
       <option value="">---Select---</option>
-      <option value="">1 Month</option>
+      <option id="m1" value="">1 Month</option>
       <option value="">2 Month</option>
       <option value="">3 Month</option>
     </select>
@@ -131,5 +193,25 @@ $(document).ready(function(){
 $('#{{initial}}').addClass("current-page-item");
 
 });
+
+function check(){
+  // alert('hello');
+var appliedfor = $('#appliedfor').val();
+var course = $('#course').val();
+
+if((appliedfor == "11" || appliedfor == "12")){
+
+  if(course == "e-learning")
+  {
+
+  }
+  else{
+    $('#hr1').remove();
+    $('#m1').remove();
+  }
+// alert('Allow');
+}
+
+}
 </script>
 {% endblock %}

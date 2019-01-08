@@ -873,9 +873,11 @@ header.inner-header .top-header {
   border: none;
 }
 .popular-course .course-item-wrapper .text>div a {
-  width:75px;
-  line-height: 35px;
+  /* width:75px; */
+  /* line-height: 35px; */
   color:#fff;
+  padding: 10px;
+  border-radius: 5px;
 }
 .popular-course .course-item-wrapper .item {
   margin: 60px 15px 10px 15px;

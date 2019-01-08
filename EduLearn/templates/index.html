@@ -2,6 +2,26 @@
 
 {% load static %}
 
+{% block csscode %}
+
+<style media="screen">
+	.hc{
+		color:#fff;
+		background:#000;
+	}
+
+	.h2c{
+		color:#f00;
+		background:#ffd9cc;
+	}
+
+.pd
+{
+/* padding:10px; */
+}
+</style>
+{% endblock %}
+
 {% block bodydata %}
 			<!-- Theme Banner ________________________________ -->
 
@@ -127,9 +147,9 @@
 		        					<div class="img round-border"><img src="{% static 'images/new/icon1.png' %}" alt="Image"></div>
 		        					<h6 style="font-weight:bold;">Fee Details </h6>
 
-										<table class="table table-bordered" style="font-weight:bold;color:red;">
+										<table class="table table-bordered" style="font-weight:bold;color:#000;">
 											<thead>
-												<tr>
+												<tr class="hc">
 													<th></th>
 													<th>1 Month</th>
 													<th>2 Month</th>
@@ -139,13 +159,13 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td>1 Hour</td><td>600 RS</td><td>1100 RS</td><td>1600 RS</td>
+													<td class="h2c">1 Hour</td><td>600 RS</td><td>1100 RS</td><td>1600 RS</td>
 												</tr>
 												<tr>
-													<td>2 Hour</td><td>1100 RS</td><td>2100 RS</td><td>3000 RS</td>
+													<td class="h2c">2 Hour</td><td>1100 RS</td><td>2100 RS</td><td>3000 RS</td>
 												</tr>
 												<tr>
-													<td>3 Hour</td><td>1600 RS</td><td>3100 RS</td><td>4600 RS</td>
+													<td class="h2c">3 Hour</td><td>1600 RS</td><td>3100 RS</td><td>4600 RS</td>
 												</tr>
 											</tbody>
 										</table>
@@ -153,7 +173,7 @@
 		        					<div class="clear-fix">
 
 
-		        						<a href="{% url 'services' %}" class="tran3s p-color-bg themehover">Read More</a>
+		        						<a href="{% url 'services' %}" class="tran3s p-color-bg themehover pd">Read More</a>
 		        					</div>
 		        				</div> <!-- /.text -->
 		        			</div> <!-- /.item -->
@@ -165,9 +185,9 @@
 											<div class="img round-border"><img src="{% static 'images/new/icon2.png' %}" alt="Image"></div>
 											<h6 style="font-weight:bold;">Fee Details </h6>
 
-										<table class="table table-bordered" style="font-weight:bold;color:red;">
+										<table class="table table-bordered" style="font-weight:bold;color:#000;">
 											<thead>
-												<tr>
+												<tr class="hc">
 													<th></th>
 													<th>1 Month</th>
 													<th>2 Month</th>
@@ -177,13 +197,13 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td>1 Hour</td><td>700 RS</td><td>1300 RS</td><td>1900 RS</td>
+													<td class="h2c">1 Hour</td><td>700 RS</td><td>1300 RS</td><td>1900 RS</td>
 												</tr>
 												<tr>
-													<td>2 Hour</td><td>1300 RS</td><td>2500 RS</td><td>3700 RS</td>
+													<td class="h2c">2 Hour</td><td>1300 RS</td><td>2500 RS</td><td>3700 RS</td>
 												</tr>
 												<tr>
-													<td>3 Hour</td><td>1900 RS</td><td>3700 RS</td><td>5500 RS</td>
+													<td class="h2c">3 Hour</td><td>1900 RS</td><td>3700 RS</td><td>5500 RS</td>
 												</tr>
 											</tbody>
 										</table>
@@ -191,7 +211,7 @@
 											<div class="clear-fix">
 
 
-												<a href="{% url 'services' %}" class="tran3s p-color-bg themehover">Read More</a>
+												<a href="{% url 'services' %}" class="tran3s p-color-bg themehover pd">Read More</a>
 											</div>
 										</div> <!-- /.text -->
 									</div>
@@ -203,9 +223,9 @@
 		        					<div class="img round-border"><img src="{% static 'images/new/icon3.png' %}" alt="Image"></div>
 		        					<h6 style="font-weight:bold;">Fee Details </h6>
 
-										<table class="table table-bordered" style="font-weight:bold;color:red;">
+										<table class="table table-bordered" style="font-weight:bold;color:#000;">
 											<thead>
-												<tr>
+												<tr class="hc">
 													<th></th>
 													<th>1 Month</th>
 													<th>2 Month</th>
@@ -215,13 +235,13 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td>1 Hour</td><td>800 RS</td><td>1500 RS</td><td>2200 RS</td>
+													<td class="h2c">1 Hour</td><td>800 RS</td><td>1500 RS</td><td>2200 RS</td>
 												</tr>
 												<tr>
-													<td>2 Hour</td><td>1500 RS</td><td>2900 RS</td><td>4300 RS</td>
+													<td class="h2c">2 Hour</td><td>1500 RS</td><td>2900 RS</td><td>4300 RS</td>
 												</tr>
 												<tr>
-													<td>3 Hour</td><td>2200 RS</td><td>4300 RS</td><td>6400 RS</td>
+													<td class="h2c">3 Hour</td><td>2200 RS</td><td>4300 RS</td><td>6400 RS</td>
 												</tr>
 											</tbody>
 										</table>
@@ -229,7 +249,7 @@
 		        					<div class="clear-fix">
 
 
-		        						<a href="{% url 'services' %}" class="tran3s p-color-bg themehover">Read More</a>
+		        						<a href="{% url 'services' %}" class="tran3s p-color-bg themehover pd">Read More</a>
 		        					</div>
 		        				</div> <!-- /.text -->
 		        			</div>
@@ -283,14 +303,6 @@
 
 
 	        <!-- Information Banner _______________________ -->
-	        <div class="information-banner wow fadeInUp">
-	        	<div class="container">
-	        		<h3>Information for teachers and students, Event information and <span class="p-color">education news</span></h3>
-	        		<h6>ONE OF THE MOST COMPLETE Education THEME</h6>
-	        		<a href="contact-us.html" class="p-color-bg tran3s wow fadeInUp">Contact us</a>
-	        	</div> <!-- /.container -->
-	        </div> <!-- /.information-banner -->
-
 
 
 
