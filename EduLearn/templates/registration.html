@@ -27,7 +27,8 @@ font-weight:bold;
 
 
 <br>
-<form class="" action="#" method="post">
+<form class="" action="{% url 'savestudent' %}" method="POST">
+  {% csrf_token %}
 <div class="container">
   <div class="col-md-6 col-sm-6">
 <h3>Registration Form</h3>
@@ -35,13 +36,13 @@ font-weight:bold;
 
 <div class="form-group">
   <label for="Name">Full Name</label>
-  <input type="text" name="fullname" class="form-control" value="">
+  <input type="text" name="fullname" class="form-control"  >
 </div>
 
 <div class="form-group">
   <label for="Name">Applied For</label>
 <select class="form-control" name="appliedfor" id="appliedfor" onchange="check();">
-  <option value="">---Select---</option>
+  <option  >---Select---</option>
   <option value="11">11 <sup>th</sup> (Science)</option>
   <option value="12">12 <sup>th</sup> (Science)</option>
   <option>MPSC</option>
@@ -72,7 +73,7 @@ font-weight:bold;
 </div>
 <div class="form-group">
   <label for="Name">Date Of Birth</label>
-  <input type="date" name="dob" class="form-control" value="">
+  <input type="date" name="dob" class="form-control"  >
 </div>
 
 <div class="form-group">
@@ -82,12 +83,12 @@ font-weight:bold;
 
 <div class="form-group">
   <label for="Name">Contact 1</label>
-  <input type="number" name="mob" class="form-control" value="">
+  <input type="number" name="mob1" class="form-control"  >
 </div>
 
 <div class="form-group">
   <label for="Name">Contact 2</label>
-  <input type="number" name="mob1" class="form-control" value="">
+  <input type="number" name="mob2" class="form-control"  >
 </div>
 
 
@@ -99,79 +100,79 @@ font-weight:bold;
   <br><br>
   <div class="form-group">
     <label for="Name">District</label>
-    <select class="form-control" name="District" >
-      <option value="">---Select---</option>
-      <option value="">Akola</option>
-      <option value="">Amravati</option>
-      <option value="">Buldana</option>
-      <option value="">Yavatmal</option>
-      <option value="">Washim</option>
-      <option value="">Aurangabad</option>
-      <option value="">Beed</option>
-      <option value="">Jalna</option>
-      <option value="">Osmanabad</option>
-      <option value="">Nanded</option>
-      <option value="">Latur</option>
-      <option value="">Parbhani</option>
-      <option value="">Hingoli</option>
-      <option value="">Mumbai City</option>
-      <option value="">Mumbai Suburban</option>
-      <option value="">Thane</option>
-      <option value="">Palghar</option>
-      <option value="">Raigad</option>
-      <option value="">Ratnagiri</option>
-      <option value="">Sindhudurg</option>
-      <option value="">Bhandara</option>
-      <option value="">Chandrapur</option>
-      <option value="">Gadchiroli</option>
-      <option value="">Gondia</option>
-      <option value="">Nagpur</option>
-      <option value="">Wardha</option>
-      <option value="">Ahmednagar</option>
-      <option value="">Dhule</option>
-      <option value="">Jalgaon</option>
-      <option value="">Nandurbar</option>
-      <option value="">Nashik</option>
-      <option value="">Kolhapur</option>
-      <option value="">Pune</option>
-      <option value="">Sangli</option>
-      <option value="">Satara</option>
-      <option value="">Solapur</option>
+    <select class="form-control" name="district" >
+      <option >---Select---</option>
+      <option  >Akola</option>
+      <option  >Amravati</option>
+      <option  >Buldana</option>
+      <option  >Yavatmal</option>
+      <option  >Washim</option>
+      <option  >Aurangabad</option>
+      <option  >Beed</option>
+      <option  >Jalna</option>
+      <option  >Osmanabad</option>
+      <option  >Nanded</option>
+      <option  >Latur</option>
+      <option  >Parbhani</option>
+      <option  >Hingoli</option>
+      <option  >Mumbai City</option>
+      <option  >Mumbai Suburban</option>
+      <option  >Thane</option>
+      <option  >Palghar</option>
+      <option  >Raigad</option>
+      <option  >Ratnagiri</option>
+      <option  >Sindhudurg</option>
+      <option  >Bhandara</option>
+      <option  >Chandrapur</option>
+      <option  >Gadchiroli</option>
+      <option  >Gondia</option>
+      <option  >Nagpur</option>
+      <option  >Wardha</option>
+      <option  >Ahmednagar</option>
+      <option  >Dhule</option>
+      <option  >Jalgaon</option>
+      <option  >Nandurbar</option>
+      <option  >Nashik</option>
+      <option  >Kolhapur</option>
+      <option  >Pune</option>
+      <option  >Sangli</option>
+      <option  >Satara</option>
+      <option  >Solapur</option>
       </select>
   </div>
 
   <div class="form-group">
     <label for="Name">Address</label>
-    <textarea name="name" class="form-control"></textarea>
+    <textarea name="address" class="form-control"></textarea>
   </div>
 
   <div class="form-group">
     <label for="Name">Applied For Course Programme</label>
-    <select class="form-control" name="course" id="course" onchange="check();">
-      <option value="">---Select---</option>
+    <select class="form-control" name="apppliedprogram" id="apppliedprogram" onchange="check();">
+      <option  >---Select---</option>
       <option value="e-learning">E-Learning</option>
-      <option value="">Test Series</option>
+      <option >Test Series</option>
       <option value="Combo">Combo (E-learning + Test Series)</option>
     </select>
   </div>
 
   <div class="form-group">
     <label for="Name">Duration Of Programme</label>
-    <select class="form-control" name="District" >
-      <option value="">---Select---</option>
-      <option id="hr1" value="">1HR</option>
-      <option value="">2HR</option>
-      <option value="">3HR</option>
+    <select class="form-control" name="durationofprogram" >
+      <option  >---Select---</option>
+      <option id="hr1"  >1HR</option>
+      <option >2HR</option>
+      <option >3HR</option>
     </select>
   </div>
 
   <div class="form-group">
     <label for="Name">Duration Of Month</label>
-    <select class="form-control" name="District" >
-      <option value="">---Select---</option>
-      <option id="m1" value="">1 Month</option>
-      <option value="">2 Month</option>
-      <option value="">3 Month</option>
+    <select class="form-control" name="durstionofmonth" >
+      <option  >---Select---</option>
+      <option id="m1"  >1 Month</option>
+      <option  >2 Month</option>
+      <option  >3 Month</option>
     </select>
   </div>
 <br>
