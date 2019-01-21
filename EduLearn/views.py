@@ -44,5 +44,5 @@ def savestudent(request):
         else:
             return render(request,'404.html',{'initial':'r'})
 
-    except:
-        return render(request,'404.html',{'initial':'r'})
+    except Exception as e:
+        return render(request,'404.html',{'initial':'r','e':e})
