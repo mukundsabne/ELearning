@@ -1,6 +1,10 @@
 from django.shortcuts import render,redirect
 from django.core.mail import send_mail
-from .models import Registration
+from .models import Registration,Contact
+from django.http import HttpResponse
+from django.core import serializers
+
+
 
 def index(request):
     return render(request,'index.html',{'initial':'h'})
@@ -24,6 +28,15 @@ def faq(request):
 def reg(request):
     return render(request,'registration.html',{'initial':'r'})
 
+def viewstudent(request):
+    return render(request,'viewstudents.html')
+
+def ajx(request):
+    r = Registration.objects.all()
+    data = serializers.serialize('json', r, fields=('fullname','id','appliedfor','dob','gender','contact1','contact2','district','address','apppliedprogram','durationofprogram','durstionofmonth'))
+    return HttpResponse(data)
+
+
 def savestudent(request):
     fullname = request.POST['fullname']
     appliedfor = request.POST['appliedfor']
@@ -41,6 +54,22 @@ def savestudent(request):
         if request.method == 'POST':
             r.save()
             return redirect('reg')
+        else:
+            return render(request,'404.html',{'initial':'r'})
+
+    except Exception as e:
+        return render(request,'404.html',{'initial':'r','e':e})
+
+def savecontact(request):
+    fullname = request.POST['fullname']
+    contact = request.POST['mob']
+    email = request.POST['email']
+    message = request.POST['msg']
+    c = Contact(fullname=fullname,mobileno=contact,email=email,message=message)
+    try:
+        if request.method == 'POST':
+            c.save()
+            return redirect('contact')
         else:
             return render(request,'404.html',{'initial':'r'})
 

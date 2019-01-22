@@ -9,5 +9,8 @@ urlpatterns = [
     path('contact/',views.contact,name='contact'),
     path('faq/',views.faq,name='faq'),
     path('reg/',views.reg,name='reg'),
+    path('ajx/',views.ajx,name='ajx'),
     path('savestudent/',views.savestudent,name='savestudent'),
+    path('savecontact/',views.savecontact,name='savecontact'),
+    path('viewstudent/',views.viewstudent,name='viewstudent'),
 ]

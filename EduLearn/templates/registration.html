@@ -31,6 +31,10 @@ font-weight:bold;
   {% csrf_token %}
 <div class="container">
   <div class="col-md-6 col-sm-6">
+    <h4> {% if msg %}
+      {{msg}}
+          {% endif %}
+     </h4>
 <h3>Registration Form</h3>
 <br>
 
@@ -193,6 +197,7 @@ $(document).ready(function(){
 
 $('#{{initial}}').addClass("current-page-item");
 
+});
 });
 
 function check(){

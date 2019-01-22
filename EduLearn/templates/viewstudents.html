@@ -1,0 +1,98 @@
+{% extends 'maintheme.html' %}
+
+{% load static %}
+
+{% block bodydata %}
+
+<div class="inner-page-banner">
+  <div class="opacity">
+    <div class="container">
+      <h2>All Studens</h2>
+    </div> <!-- /.container -->
+  </div> <!-- /.opacity -->
+</div> <!-- /.inner-page-banner -->
+<br>
+<div class="col-md-12 col-xs-12 table-responsive" style="background:#fff">
+               <table id="myTable" class="table table-striped table-hover table-bordered" style="background-color: #fff;padding-top: 3px;color: #000;font-size: 12px;font-weight: bold;">
+               <thead>
+               <tr>
+
+
+               <th>fullname</th><th>appliedfor</th><th>gender</th><th>contact1</th>
+               <th>contact2</th><th>district</th>
+               <th>address</th><th>apppliedprogram</th><th>durationofprogram</th>
+               <th>durstionofmonth</th><th>dob</th>
+
+               </tr>
+
+               </thead>
+
+               </table>
+        </div>
+
+
+{% endblock %}
+
+
+{% block jquerycode %}
+
+<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+// $('#{{initial}}').addClass("current-page-item");
+
+$.ajax({
+    url:"/ajx",
+    type:'GET',
+    data:'',
+    success:function(dt){
+      //console.log(dt);
+      r = JSON.parse(dt);
+      data = [];
+      for(var i = 0;i<r.length;i++)
+      {
+        //console.log();
+        data.push(r[i].fields);
+
+      }
+
+      console.log(data);
+      t = $('#myTable').DataTable({
+        "oLanguage": {
+           "sSearch": "Filter Data"
+               },
+
+       data:data,
+       columns:[
+                {data:'fullname'},
+                {data:'appliedfor'},
+              {data:'gender'},
+            {data:'contact1'},
+            {data:'contact2'},
+        {data:'district'},
+       {data:'address'},
+       {data:'apppliedprogram'},
+       {data:'durationofprogram'},
+       {data:'durstionofmonth'},
+       {data:'dob',
+         render:function(d){
+               if(d == "Not Available"){
+               return d;
+               }
+               else{
+                 return d.substring(8,10)+'-'+d.substring(5,7)+'-'+d.substring(0,4);
+               }
+         }
+       },
+
+                ],
+
+     });
+    }
+
+});
+});
+</script>
+{% endblock %}

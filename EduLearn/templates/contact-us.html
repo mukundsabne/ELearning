@@ -39,8 +39,8 @@
 <div class="container">
   <div class="col-md-6 col-sm-6">
 <h3>Contact Us</h3>
-<form class="" action="#" method="post">
-
+<form class="" action="{% url 'savecontact' %}" method="post">
+{% csrf_token %}
 <div class="form-group">
   <label for="Name">Full Name</label>
   <input type="text" name="fullname" class="form-control" value="">
@@ -58,7 +58,7 @@
 
 <div class="form-group">
   <label for="Name">Message</label>
-  <textarea name="name" class="form-control"></textarea>
+  <textarea name="msg" class="form-control"></textarea>
 </div>
 
 <div class="">

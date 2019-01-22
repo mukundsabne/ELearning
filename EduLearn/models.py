@@ -24,3 +24,9 @@ class Demo(models.Model):
 
     def __str__(self):
         return self.fname+' '+self.lname
+
+class Contact(models.Model):
+    fullname = models.CharField(max_length=200)
+    email = models.EmailField(max_length=200)
+    mobileno = models.BigIntegerField(default=0)
+    message = models.CharField(max_length=200)

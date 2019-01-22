@@ -129,7 +129,7 @@
 /*(min-width: 768px) and (max-width: 991px)*/
 
 @media (max-width: 767px) {
-    .main-menu-wrapper .logo img {width:60%;}
+    .main-menu-wrapper .logo img {width:60%;margin-top: -72px;}
     .navbar-toggle {margin: 13px 0;}
     .main-menu-wrapper form {top:10px;}
     .theme-manage-area .item1,.course-details-page .course-details-content .sub-text ul.st-requirements-list li {width: 100%;}
