@@ -38,6 +38,12 @@
 <br>
 <div class="container">
   <div class="col-md-6 col-sm-6">
+    <h4 style="color:#f00;"> {% if request.session.msg %}
+
+      {{request.session.msg}}
+          {% endif %}
+     </h4>
+     <br>
 <h3>Contact Us</h3>
 <form class="" action="{% url 'savecontact' %}" method="post">
 {% csrf_token %}

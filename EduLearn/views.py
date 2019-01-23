@@ -7,6 +7,7 @@ from django.core import serializers
 
 
 def index(request):
+    request.session['msg'] = None
     return render(request,'index.html',{'initial':'h'})
 
 def aboutus(request):
@@ -53,6 +54,7 @@ def savestudent(request):
     try:
         if request.method == 'POST':
             r.save()
+            request.session['msg'] = "Inserted Succesfully !!!"
             return redirect('reg')
         else:
             return render(request,'404.html',{'initial':'r'})
@@ -69,6 +71,7 @@ def savecontact(request):
     try:
         if request.method == 'POST':
             c.save()
+            request.session['msg'] = "Thanks For Your Interest.. We Will Contact You Very Soon !!!"
             return redirect('contact')
         else:
             return render(request,'404.html',{'initial':'r'})

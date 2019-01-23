@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'ELearning.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test',
-        'USER':'postgres',
-        'PASSWORD':'root',
+        'NAME': 'laturhub',
+        'USER':'mukund',
+        'PASSWORD':'mukund',
         'PORT':5432,
         'HOST':'localhost',
     }
