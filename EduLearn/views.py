@@ -11,19 +11,23 @@ def index(request):
     return render(request,'index.html',{'initial':'h'})
 
 def aboutus(request):
+    request.session['msg'] = None
     send_mail('Automated Mail','Sending Mail From Elearning Website using billing software email....','Mukund',['vijaythakur015@gmail.com'])
     return render(request,'about-us.html',{'initial':'a'})
 
 def services(request):
+    request.session['msg'] = None
     return render(request,'services.html',{'initial':'s'})
 
 def gallery(request):
+    request.session['msg'] = None
     return render(request,'gallery.html',{'initial':'g'})
 
 def contact(request):
     return render(request,'contact-us.html',{'initial':'c'})
 
 def faq(request):
+    request.session['msg'] = None
     return render(request,'faq.html',{'initial':'f'})
 
 def reg(request):
