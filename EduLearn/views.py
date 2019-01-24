@@ -12,7 +12,7 @@ def index(request):
 
 def aboutus(request):
     request.session['msg'] = None
-    send_mail('Automated Mail','Sending Mail From Elearning Website using billing software email....','Mukund',['vijaythakur015@gmail.com'])
+    #send_mail('Automated Mail','Sending Mail From Elearning Website using billing software email....','Mukund',['vijaythakur015@gmail.com'])
     return render(request,'about-us.html',{'initial':'a'})
 
 def services(request):
