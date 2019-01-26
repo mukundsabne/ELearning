@@ -48,7 +48,7 @@ font-weight:bold;
 <div class="form-group">
   <label for="Name">Applied For</label>
 <select class="form-control" name="appliedfor" id="appliedfor" onchange="check();">
-  <option  >---Select---</option>
+  <option >---Select---</option>
   <option value="11">11 <sup>th</sup> (Science)</option>
   <option value="12">12 <sup>th</sup> (Science)</option>
   <option>MPSC</option>
@@ -154,8 +154,8 @@ font-weight:bold;
 
   <div class="form-group">
     <label for="Name">Applied For Course Programme</label>
-    <select class="form-control" name="apppliedprogram" id="apppliedprogram" onchange="check();">
-      <option  >---Select---</option>
+    <select class="form-control" name="apppliedprogram"  id="course" onchange="check();">
+      <option  value="">---Select---</option>
       <option value="e-learning">E-Learning</option>
       <option >Test Series</option>
       <option value="Combo">Combo (E-learning + Test Series)</option>
@@ -164,7 +164,7 @@ font-weight:bold;
 
   <div class="form-group">
     <label for="Name">Duration Of Programme</label>
-    <select class="form-control" name="durationofprogram" >
+    <select class="form-control" name="durationofprogram" id="hour">
       <option  >---Select---</option>
       <option id="hr1"  >1HR</option>
       <option >2HR</option>
@@ -174,7 +174,7 @@ font-weight:bold;
 
   <div class="form-group">
     <label for="Name">Duration Of Month</label>
-    <select class="form-control" name="durstionofmonth" >
+    <select class="form-control" name="durstionofmonth" id="month">
       <option  >---Select---</option>
       <option id="m1"  >1 Month</option>
       <option  >2 Month</option>
@@ -200,18 +200,30 @@ $(document).ready(function(){
 $('#{{initial}}').addClass("current-page-item");
 
 });
-});
+
 
 function check(){
   // alert('hello');
 var appliedfor = $('#appliedfor').val();
 var course = $('#course').val();
+var h = '';
+var m = '';
+h += '<option >---Select---</option>';
+h += '<option id="hr1">1HR</option>';
+h += '<option >2HR</option>';
+h += '<option >3HR</option>';
 
+m +='<option >---Select---</option>';
+m +='<option id="m1" >1 Month</option>';
+m += '<option >2 Month</option>';
+m += '<option >3 Month</option>';
+// alert(course);
 if((appliedfor == "11" || appliedfor == "12")){
 
-  if(course == "e-learning")
+  if(course == "e-learning" || course == "")
   {
-
+    $('#hour').html(h);
+    $('#month').html(m);
   }
   else{
     $('#hr1').remove();
