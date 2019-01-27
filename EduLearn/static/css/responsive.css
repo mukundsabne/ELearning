@@ -161,6 +161,7 @@
     .error-page .error-wrapper h2 span.opps {position: static;}
     #banner h1 {font-size: 30px;line-height: 40px;}
     #banner h5 {font-size: 14px;}
+		#websitename{font-size: 14px;margin-top:-60px;margin-left: 25%;width:100%;}
 }
 /*(max-width: 767px)*/
 
@@ -211,7 +212,7 @@
    .main-menu-wrapper form {position: relative;width:100%;margin: 0 0 20px 0;left:auto;}
    .navbar-collapse,.navbar-collapse.collapse.in {padding-left: 0;padding-right: 0;}
    .main-menu-wrapper.fixed form,header .top-header div.right-side {display: none;}
-   .main-menu-wrapper.fixed .logo {top:0;}
+   .main-menu-wrapper.fixed .logo {}
    .scroll-top {right:5px; bottom: 15px;}
    .course-v2 .single-course .course-heading ul li {display: block;margin: 0 0 5px 0;}
 }
