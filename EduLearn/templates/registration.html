@@ -62,9 +62,9 @@ font-weight:bold;
   <option>MPSC-CLERK</option>
   <option>BCA</option>
   <option>MCA</option>
-  <option>TAX ASSISTMENT</option>
+  <option>TAX ASSISTANT</option>
   <option>GOVT. PHARMACIST </option>
-  <option>ASP</option>
+  <option>Forest Guard</option>
   <option>RRB </option>
   <option>POLICE CONSTABLE</option>
   <option>NIPER</option>
@@ -74,6 +74,7 @@ font-weight:bold;
   <option>NEET</option>
   <option>AIIMS</option>
   <option>सरळ सेवा भरती </option>
+  <option>Other</option>
 
 </select>
 </div>
@@ -159,6 +160,10 @@ font-weight:bold;
       <option value="e-learning">E-Learning</option>
       <option >Test Series</option>
       <option value="Combo">Combo (E-learning + Test Series)</option>
+      <option >E-learning Test Series Combo)</option>
+      <option >Prefoundation</option>
+      <option >Screening Test</option>
+        <option >Other</option>
     </select>
   </div>
 
@@ -204,33 +209,33 @@ $('#{{initial}}').addClass("current-page-item");
 
 function check(){
   // alert('hello');
-var appliedfor = $('#appliedfor').val();
-var course = $('#course').val();
-var h = '';
-var m = '';
-h += '<option >---Select---</option>';
-h += '<option id="hr1">1HR</option>';
-h += '<option >2HR</option>';
-h += '<option >3HR</option>';
-
-m +='<option >---Select---</option>';
-m +='<option id="m1" >1 Month</option>';
-m += '<option >2 Month</option>';
-m += '<option >3 Month</option>';
-// alert(course);
-if((appliedfor == "11" || appliedfor == "12")){
-
-  if(course == "e-learning" || course == "")
-  {
-    $('#hour').html(h);
-    $('#month').html(m);
-  }
-  else{
-    $('#hr1').remove();
-    $('#m1').remove();
-  }
-// alert('Allow');
-}
+// var appliedfor = $('#appliedfor').val();
+// var course = $('#course').val();
+// var h = '';
+// var m = '';
+// h += '<option >---Select---</option>';
+// h += '<option id="hr1">1HR</option>';
+// h += '<option >2HR</option>';
+// h += '<option >3HR</option>';
+//
+// m +='<option >---Select---</option>';
+// m +='<option id="m1" >1 Month</option>';
+// m += '<option >2 Month</option>';
+// m += '<option >3 Month</option>';
+// // alert(course);
+// if((appliedfor == "11" || appliedfor == "12")){
+//
+//   if(course == "e-learning" || course == "")
+//   {
+//     $('#hour').html(h);
+//     $('#month').html(m);
+//   }
+//   else{
+//     $('#hr1').remove();
+//     $('#m1').remove();
+//   }
+// // alert('Allow');
+// }
 
 }
 </script>

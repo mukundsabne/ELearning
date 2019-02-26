@@ -1,14 +1,17 @@
 from django.shortcuts import render,redirect
 from django.core.mail import send_mail
-from .models import Registration,Contact
+from .models import Registration,Contact,Count
 from django.http import HttpResponse
 from django.core import serializers
 
 
 
 def index(request):
+    c = Count.objects.get(id=1)
+    c.counted = c.counted + 1;
+    c.save()
     request.session['msg'] = None
-    return render(request,'index.html',{'initial':'h'})
+    return render(request,'index.html',{'initial':'h','count':c.counted})
 
 def aboutus(request):
     request.session['msg'] = None

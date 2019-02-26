@@ -30,3 +30,7 @@ class Contact(models.Model):
     email = models.EmailField(max_length=200)
     mobileno = models.BigIntegerField(default=0)
     message = models.CharField(max_length=200)
+
+class Count(models.Model):
+    counted = models.IntegerField(default=0)
+    
